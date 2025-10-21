@@ -2,7 +2,7 @@
 
 ![SQL](https://img.shields.io/badge/SQL-MySQL%208.0%2B-4479A1?logo=mysql&logoColor=white) ![License](https://img.shields.io/badge/license-BlackCat%20Proprietary-red) ![Status](https://img.shields.io/badge/status-stable-informational) ![Generated](https://img.shields.io/badge/generated-from%20schema--map-blue)
 
-> Schema package for table **reviews** (repo: $slug).
+> Schema package for table **reviews** (repo: `reviews`).
 
 ## Files
 ```
@@ -52,13 +52,13 @@ mysql -h 127.0.0.1 -P 3307 -u root -proot app < schema/030_foreign_keys.sql
 ```mermaid
 erDiagram
   REVIEWS {
-    BIGINT id PK
-    BIGINT book_id
-    BIGINT user_id
-    TINYINT rating
-    TEXT review_text
-    DATETIME(6) created_at
-    DATETIME(6) updated_at
+    INT id PK
+    INT book_id
+    INT user_id
+    INT rating
+    VARCHAR review_text
+    DATETIME created_at
+    DATETIME updated_at
   }
   REVIEWS }o--|| BOOKS : "book_id"
   REVIEWS }o--|| USERS : "user_id"
