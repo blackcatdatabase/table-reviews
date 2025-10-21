@@ -60,8 +60,8 @@ erDiagram
     DATETIME(6) created_at
     DATETIME(6) updated_at
   }
-  REVIEWS }o--|| BOOKS : (book_id)
-  REVIEWS }o--|| USERS : (user_id)
+  REVIEWS }o--|| BOOKS : "book_id"
+  REVIEWS }o--|| USERS : "user_id"
 ```
 
 ## Indexes
