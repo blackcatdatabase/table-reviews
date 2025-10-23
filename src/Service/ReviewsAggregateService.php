@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\Reviews\Service;
 
-use BlackCat\Core\Database\Database;
+use BlackCat\Core\Database;
 use BlackCat\Database\Packages\Reviews\Dto\ReviewDto;
 use BlackCat\Database\Packages\Reviews\Mapper\ReviewDtoMapper;
 use BlackCat\Database\Packages\Reviews\Repository\ReviewRepository;
