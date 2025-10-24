@@ -6,7 +6,7 @@ namespace BlackCat\Database\Packages\Reviews;
 final class Definitions {
     // --- základní metadata ---
     public static function table(): string { return 'reviews'; }
-    public static function contractView(): string { return 'v_reviews_contract'; }
+    public static function contractView(): string { return 'vw_reviews'; }
     /** @return string[] */
     public static function columns(): array { return [ 'id', 'book_id', 'user_id', 'rating', 'review_text', 'created_at', 'updated_at' ]; }
     public static function pk(): string { return 'id'; }
