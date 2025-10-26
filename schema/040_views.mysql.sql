@@ -1,8 +1,9 @@
--- Auto-generated from schema-views-mysql.psd1 (map@mtime:2025-10-24T09:19:46Z)
+-- Auto-generated from schema-views-mysql.psd1 (map@38d5403)
 -- engine: mysql
 -- table:  reviews
 -- Contract view for [reviews]
-CREATE OR REPLACE VIEW vw_reviews AS
+-- Adds is_edited helper.
+CREATE OR REPLACE SQL SECURITY INVOKER VIEW vw_reviews AS
 SELECT
   id,
   book_id,
@@ -10,5 +11,6 @@ SELECT
   rating,
   review_text,
   created_at,
-  updated_at
+  updated_at,
+  (updated_at IS NOT NULL) AS is_edited
 FROM reviews;
