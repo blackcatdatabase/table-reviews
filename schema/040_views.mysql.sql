@@ -1,10 +1,11 @@
--- Auto-generated from schema-views-mysql.psd1 (map@db2f8b8)
+-- Auto-generated from schema-views-mysql.psd1 (map@62c9c93)
 -- engine: mysql
 -- table:  reviews
 -- Contract view for [reviews]
 -- Adds is_edited helper.
 CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_reviews AS
 SELECT
+  tenant_id,
   id,
   book_id,
   user_id,
