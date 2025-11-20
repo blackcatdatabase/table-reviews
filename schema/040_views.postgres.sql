@@ -6,6 +6,7 @@
 CREATE OR REPLACE VIEW vw_reviews AS
 SELECT
   id,
+  tenant_id,
   book_id,
   user_id,
   rating,

@@ -5,6 +5,7 @@
 -- Adds is_edited helper.
 CREATE OR REPLACE ALGORITHM=MERGE SQL SECURITY INVOKER VIEW vw_reviews AS
 SELECT
+  tenant_id,
   id,
   book_id,
   user_id,
