@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.psd1 (map@9d3471b)
+-- Auto-generated from schema-map-postgres.psd1 (map@62c9c93)
 -- engine: postgres
 -- table:  reviews
 CREATE UNIQUE INDEX IF NOT EXISTS ux_reviews_tenant_book_user ON reviews (tenant_id, book_id, user_id);
