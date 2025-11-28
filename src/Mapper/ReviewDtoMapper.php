@@ -17,7 +17,7 @@ use BlackCat\Database\Support\DtoHydrator;
 final class ReviewDtoMapper
 {
     /** @var array<string,string> Column -> DTO property */
-    private const COL_TO_PROP = [ 'tenant_id' => 'tenantId', 'book_id' => 'bookId', 'user_id' => 'userId', 'review_text' => 'reviewText', 'created_at' => 'createdAt', 'updated_at' => 'updatedAt' ];
+    private const COL_TO_PROP = [ 'id' => 'id', 'tenant_id' => 'tenantId', 'book_id' => 'bookId', 'user_id' => 'userId', 'rating' => 'rating', 'review_text' => 'reviewText', 'created_at' => 'createdAt', 'updated_at' => 'updatedAt' ];
 
     /** @var string[] */
     private const BOOL_COLS   = [];

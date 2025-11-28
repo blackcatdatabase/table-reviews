@@ -1,6 +1,7 @@
--- Auto-generated from schema-views-postgres.psd1 (map@62c9c93)
+-- Auto-generated from schema-views-postgres.psd1 (map@mtime:2025-11-27T15:36:13Z)
 -- engine: postgres
 -- table:  reviews
+
 -- Contract view for [reviews]
 -- Adds is_edited helper.
 CREATE OR REPLACE VIEW vw_reviews AS
