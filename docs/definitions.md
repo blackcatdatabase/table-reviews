@@ -6,11 +6,11 @@ User reviews and ratings for books. UNIQUE (book_id, user_id) â€” one user 
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
 | book_id | BIGINT | NO |  | Book (FK books.id). |
-| created_at | TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| created_at | DATETIME(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
-| rating | SMALLINT | NO |  | Rating 1..5. |
+| rating | TINYINT | NO |  | Rating 1..5. |
 | review_text | TEXT | YES |  | Free-form review text. |
-| updated_at | TIMESTAMPTZ(6) | YES |  | Last update (UTC), optional. |
+| updated_at | DATETIME(6) | YES |  | Last update (UTC), optional. |
 | user_id | BIGINT | YES |  | Authoring user (FK users.id), optional. |
 
 ## Engine Details
@@ -66,5 +66,5 @@ Foreign keys:
 ## Views
 | View | Engine | Flags | File |
 | --- | --- | --- | --- |
-| vw_reviews | mysql | algorithm=MERGE, security=INVOKER | [packages\reviews\schema\040_views.mysql.sql](https://github.com/blackcatacademy/blackcat-database/packages/reviews/schema/040_views.mysql.sql) |
-| vw_reviews | postgres |  | [packages\reviews\schema\040_views.postgres.sql](https://github.com/blackcatacademy/blackcat-database/packages/reviews/schema/040_views.postgres.sql) |
+| vw_reviews | mysql | algorithm=MERGE, security=INVOKER | [schema\040_views.mysql.sql](schema\040_views.mysql.sql) |
+| vw_reviews | postgres |  | [schema\040_views.postgres.sql](schema\040_views.postgres.sql) |
