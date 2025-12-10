@@ -5,13 +5,13 @@ User reviews and ratings for books. UNIQUE (book_id, user_id) â€” one user 
 ## Columns
 | Column | Type | Null | Default | Description |
 | --- | --- | --- | --- | --- |
-| book_id | BIGINT | NO |  | Book (FK books.id). |
 | created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
 | id | BIGINT | NO |  | Surrogate primary key. |
 | rating | mysql: TINYINT / postgres: SMALLINT | NO |  | Rating 1..5. |
-| review_text | TEXT | YES |  | Free-form review text. |
+| book_id | BIGINT | NO |  | Book (FK books.id). |
 | updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Last update (UTC), optional. |
 | user_id | BIGINT | YES |  | Authoring user (FK users.id), optional. |
+| review_text | TEXT | YES |  | Free-form review text. |
 
 ## Engine Details
 
