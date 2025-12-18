@@ -3,15 +3,16 @@
 User reviews and ratings for books. UNIQUE (book_id, user_id) â€” one user can only rate a book once.
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| book_id | BIGINT | NO |  | Book (FK books.id). |
-| user_id | BIGINT | YES |  | Authoring user (FK users.id), optional. |
-| rating | mysql: TINYINT / postgres: SMALLINT | NO |  | Rating 1..5. |
-| review_text | TEXT | YES |  | Free-form review text. |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
-| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Last update (UTC), optional. |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| tenant_id | BIGINT | NO |  | Owning tenant (FK tenants.id). |  |
+| book_id | BIGINT | NO |  | Book (FK books.id). |  |
+| user_id | BIGINT | YES |  | Authoring user (FK users.id), optional. |  |
+| rating | mysql: TINYINT / postgres: SMALLINT | NO |  | Rating 1..5. |  |
+| review_text | TEXT | YES |  | Free-form review text. |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
+| updated_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | YES |  | Last update (UTC), optional. |  |
 
 ## Engine Details
 
